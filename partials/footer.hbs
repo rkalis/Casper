@@ -2,10 +2,6 @@
 <footer class="site-footer outer">
     <div class="site-footer-content inner">
         <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-        <section class="center-footer-nav">
-            <a href="https://github.com/rkalis" title="GitHub">GitHub</i></a>
-            <a href="https://linkedin.com/in/roscokalis" title="LinkedIn">LinkedIn</a>
-        </section>
         <nav class="site-footer-nav">
             <a href="{{@blog.url}}">Latest Posts</a>
             {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank">Facebook</a>{{/if}}
