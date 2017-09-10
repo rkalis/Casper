@@ -4,19 +4,17 @@
     {{> head}}
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
-
 </head>
 <body class="{{body_class}}">
 
     <div class="site-wrapper">
-    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-    {{{body}}}
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
     </div>
 
     {{> footer}}
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
-
 </body>
 </html>
