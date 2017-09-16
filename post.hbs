@@ -144,7 +144,7 @@ $(document).ready(function () {
     $postContent.fitVids();
     // End fitVids
 
-    Countable.count($postContent, function(wordCount) {
+    Countable.count($postContent[0], function(wordCount) {
         var imageCount = $(".post-full-content img").length
         console.log(wordCount, imageCount)
     })
