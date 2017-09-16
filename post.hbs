@@ -131,19 +131,8 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
+<script src="assets/js/countable.js"></script>
 <script>
-
-function get_text(el) {
-    ret = "";
-    var length = el.childNodes.length;
-    for(var i = 0; i < length; i++) {
-        var node = el.childNodes[i];
-        if(node.nodeType != 8) {
-            ret += node.nodeType != 1 ? node.nodeValue : get_text(node);
-        }
-    }
-    return ret;
-}
 
 // NOTE: Scroll performance is poor in Safari
 // - this appears to be due to the events firing much more slowly in Safari.
@@ -152,13 +141,13 @@ function get_text(el) {
 $(document).ready(function () {
     // Start fitVids
     var $postContent = $(".post-full-content");
-
-    var words = get_text($postContent);
-    var wordCount = words.split(/\s+/).length;
-    var imageCount = $(".post-full-content img").length
-    console.log(wordCount, imageCount);
     $postContent.fitVids();
     // End fitVids
+
+    Countable.once($postContent, function(wordCount) {
+        var imageCount = $(".post-full-content img").length
+        console.log(wordCount, imageCount)
+    })
 
     var progressBar = document.querySelector('progress');
     var header = document.querySelector('.floating-header');
