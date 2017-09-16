@@ -144,10 +144,14 @@ $(document).ready(function () {
     $postContent.fitVids();
     // End fitVids
 
-    Countable.count($postContent[0], function(wordCount) {
-        var imageCount = $(".post-full-content img").length
-        console.log(wordCount, imageCount)
-    })
+    Countable.count($postContent[0], function(counter) {
+        var imageCount = $(".post-full-content img").length;
+        var seconds = counter.words / 275 * 60 + imageCount * 12;
+        var minutes = Math.round(seconds / 60);
+
+        console.log(counter.words, imageCount);
+        console.log(seconds, minutes);
+    });
 
     var progressBar = document.querySelector('progress');
     var header = document.querySelector('.floating-header');
