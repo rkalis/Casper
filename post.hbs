@@ -153,7 +153,7 @@ $(document).ready(function () {
     // Start fitVids
     var $postContent = $(".post-full-content");
 
-    var words = get_text(document.getElementById('content'));
+    var words = get_text($postContent);
     var wordCount = words.split(/\s+/).length;
     var imageCount = $(".post-full-content img").length
     console.log(wordCount, imageCount);
