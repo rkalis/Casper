@@ -23,7 +23,7 @@ into the {body} of the default.hbs template --}}
                     {{#primary_tag}}
                         <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
                     {{/primary_tag}}
-                    <span class="date-divider">/</span> <span id="read-time"></span>
+                    {{> read-time}}
                 </section>
                 <h1 class="post-full-title">{{title}}</h1>
             </header>
@@ -132,7 +132,6 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
-<script src="/assets/js/countable.js"></script>
 <script>
 
 // NOTE: Scroll performance is poor in Safari
@@ -144,17 +143,6 @@ $(document).ready(function () {
     var $postContent = $(".post-full-content");
     $postContent.fitVids();
     // End fitVids
-
-    Countable.count($postContent[0], function(counter) {
-        var imageCount = $(".post-full-content img").length;
-        var seconds = counter.words / 275 * 60 + imageCount * 12;
-        var minutes = Math.ceil(seconds / 60);
-
-        $("#read-time").html(minutes + " min read");
-
-        console.log(counter.words, imageCount);
-        console.log(seconds, minutes);
-    });
 
     var progressBar = document.querySelector('progress');
     var header = document.querySelector('.floating-header');

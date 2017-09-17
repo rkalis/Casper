@@ -1,0 +1,16 @@
+<span class="date-divider">/</span> <span id="read-time"></span>
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script src="/assets/js/countable.js"></script>
+<script>
+$(document).ready(function () {
+    Countable.count($(".post-full-content")[0], function(counter) {
+        var imageCount = $(".post-full-content img").length;
+        var seconds = counter.words / 275 * 60 + imageCount * 12;
+        var minutes = Math.ceil(seconds / 60);
+        $("#read-time").html(minutes + " min read");
+    });
+});
+</script>
+{{/contentFor}}
