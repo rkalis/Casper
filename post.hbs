@@ -23,7 +23,7 @@ into the {body} of the default.hbs template --}}
                     {{#primary_tag}}
                         <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
                     {{/primary_tag}}
-                    <span class="date-divider">/</span> Read time: <span id="read-time"></span>
+                    <span class="date-divider">/</span> <i class="fa fa-bookmark-o"></i> <span id="read-time"></span>
                 </section>
                 <h1 class="post-full-title">{{title}}</h1>
             </header>
@@ -148,9 +148,9 @@ $(document).ready(function () {
     Countable.count($postContent[0], function(counter) {
         var imageCount = $(".post-full-content img").length;
         var seconds = counter.words / 275 * 60 + imageCount * 12;
-        var minutes = Math.round(seconds / 60);
+        var minutes = Math.ceil(seconds / 60);
 
-        $("#read-time").html(minutes);
+        $("#read-time").html(minutes + " minutes");
 
         console.log(counter.words, imageCount);
         console.log(seconds, minutes);
