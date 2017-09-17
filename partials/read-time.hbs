@@ -5,18 +5,17 @@
 <script src="/assets/js/countable.js"></script>
 <script>
 $(document).ready(function () {
-    var postContents = $(".post-full-content");
-
     $(".read-time").each(function(index) {
+        var postContent = $(".post-full-content").get(index);
         var readTime = this;
-        Countable.count($(".post-full-content")[index], function(counter) {
-            var imageCount = $(".post-full-content img").length;
+
+        Countable.count(postContent, function(counter) {
+            var imageCount = $(postContent).find("img").length;
             var seconds = counter.words / 275 * 60 + imageCount * 12;
             var minutes = Math.ceil(seconds / 60);
             $(readTime).html(minutes + " min read");
         });
     })
-
 });
 </script>
 {{/contentFor}}
