@@ -30,6 +30,7 @@ gulp.task('build', ['css'], function (/* cb */) {
 
 gulp.task('css', function () {
     var processors = [
+        require('precss'),
         easyimport,
         customProperties,
         colorFunction(),
