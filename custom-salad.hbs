@@ -33,15 +33,14 @@ into the {body} of the default.hbs template --}}
             </figure>
             {{/if}}
 
-            <section class="ingredients">
-                <div class="calculator">
-                    People: <input type="range" name="people" id="people" value="4" min="1" max="10" oninput="peopleValue.value = people.value; calculate(people.value);">
-                <output name="peopleValue" id="peopleValue">4</output>
-                </div>
-                <div class="ingredients"></div>
-            </section>
-
             <section class="post-full-content">
+                <div class="ingredients">
+                    <div class="ingredient-calculator">
+                        People: <input type="range" name="people" id="people" value="4" min="1" max="10" oninput="peopleValue.value = people.value; calculate(people.value);">
+                        <output name="peopleValue" id="peopleValue">4</output>
+                    </div>
+                    <ul class="ingredients"></ul>
+                </div>
                 {{content}}
             </section>
 
@@ -118,6 +117,7 @@ into the {body} of the default.hbs template --}}
 
 {{#contentFor "scripts"}}
 <script>
+
 $(function() {
     var $postContent = $(".post-full-content");
     $postContent.fitVids();
@@ -126,9 +126,17 @@ $(function() {
 function calculate(people) {
     if (typeof saladName !== 'undefined') {
         $.get(`//salads.kalis.me/recipes/${saladName}/${people}`, function(data) {
+            for (ingredient in data) {
+                $('ul.ingredients').append(`<li class="ingredient">${ingredient}</li>`)
+            }
             console.log(data);
         })
     }
 }
+
+$(document).ready(function () {
+    var people = $('#people').val();
+    calculate(people);
+})
 </script>
 {{/contentFor}}
