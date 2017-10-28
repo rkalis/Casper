@@ -34,6 +34,7 @@ into the {body} of the default.hbs template --}}
             {{/if}}
 
             <section class="post-full-content">
+                {{! Ingredients calculator}}
                 <div class="ingredients">
                     <div class="ingredient-calculator">
                         People: <input type="range" name="people" id="people" value="4" min="1" max="10" oninput="peopleValue.value = people.value; calculate(people.value);">
@@ -41,6 +42,7 @@ into the {body} of the default.hbs template --}}
                     </div>
                     <ul class="ingredients"></ul>
                 </div>
+                <hr>
                 {{content}}
             </section>
 
@@ -126,8 +128,9 @@ $(function() {
 function calculate(people) {
     if (typeof saladName !== 'undefined') {
         $.get(`//salads.kalis.me/recipes/${saladName}/${people}`, function(data) {
+            $('ul.ingredients').html('');
             data.forEach(function(ingredient) {
-                $('ul.ingredients').append(`<li class="ingredient">${ingredient}</li>`)
+                $('ul.ingredients').append(`<li class="ingredient">${ingredient}</li>`);
                 console.log(ingredient);
             })
         })
