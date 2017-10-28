@@ -126,10 +126,10 @@ $(function() {
 function calculate(people) {
     if (typeof saladName !== 'undefined') {
         $.get(`//salads.kalis.me/recipes/${saladName}/${people}`, function(data) {
-            for (ingredient in data) {
+            data.forEach(function(ingredient) {
                 $('ul.ingredients').append(`<li class="ingredient">${ingredient}</li>`)
-            }
-            console.log(data);
+                console.log(ingredient);
+            })
         })
     }
 }
