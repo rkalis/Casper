@@ -6,8 +6,6 @@
             <a href="{{@blog.url}}">Latest Posts</a>
             {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank">Facebook</a>{{/if}}
             {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank">Twitter</a>{{/if}}
-            <a href="" class="github-link hidden" title="GitHub" target="_blank">GitHub</i></a>
-            <a href="" class="linkedin-link hidden" title="LinkedIn" target="_blank">LinkedIn</a>
         </nav>
     </div>
 </footer>
@@ -16,13 +14,11 @@
 <script>
     (function() {
         if (typeof socialMedia !== 'undefined') {
-            if (typeof socialMedia.linkedin !== 'undefined') {
-                $('.linkedin-link').attr('href', socialMedia.linkedin);
-                $('.linkedin-link').removeClass('hidden');
-            }
             if (typeof socialMedia.github !== 'undefined') {
-                $('.github-link').attr('href', socialMedia.github);
-                $('.github-link').removeClass('hidden');
+                $('.site-footer-nav').append(`<a href="${socialMedia.github}" title="GitHub" target="_blank">GitHub</a>`);
+            }
+            if (typeof socialMedia.linkedin !== 'undefined') {
+                $('.site-footer-nav').append(`<a href="${socialMedia.linkedin}" title="LinkedIn" target="_blank">LinkedIn</a>`);
             }
         }
     })();
