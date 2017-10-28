@@ -1908,3 +1908,7 @@ Usage (In Ghost editor):
         margin-left: 0;
     }
 }
+
+.hidden {
+    display: none !important;
+}

@@ -1,15 +1,20 @@
 <section class="post-full-comments">
-    <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function () {
-            this.page.url = '{{url absolute="true"}}';
-            this.page.identifier = 'ghost-{{comment_id}}';
-        };
-        (function() {
+    <div id="disqus_thread" class="disqus hidden"></div>
+</section>
+
+{{#contentFor "scripts"}}
+
+<script>
+    (function() {
+        if (typeof disqusShortName !== 'undefined') {
+            $('.disqus').removeClass('hidden');
             var d = document, s = d.createElement('script');
-            s.src = 'https://blog-kalis-me.disqus.com/embed.js';
+            s.async = true;
+            s.src = 'https://' + disqusShortName + '.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
-        })();
-    </script>
-</section>
+        }
+    })();
+</script>
+
+{{/contentFor}}
