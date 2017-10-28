@@ -33,6 +33,14 @@ into the {body} of the default.hbs template --}}
             </figure>
             {{/if}}
 
+            <section class="ingredients">
+                <div class="calculator">
+                    People: <input type="range" name="people" id="people" value="4" min="1" max="10" oninput="peopleValue.value = people.value; calculate(people.value);">
+                <output name="peopleValue" id="peopleValue">4</output>
+                </div>
+                <div class="ingredients"></div>
+            </section>
+
             <section class="post-full-content">
                 {{content}}
             </section>
@@ -114,5 +122,13 @@ $(function() {
     var $postContent = $(".post-full-content");
     $postContent.fitVids();
 });
+
+function calculate(people) {
+    if (typeof saladName !== 'undefined') {
+        $.get(`https://salads.kalis.me/recipes/${saladName}/${people}`, function(data) {
+            console.log(data);
+        })
+    }
+}
 </script>
 {{/contentFor}}
