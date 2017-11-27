@@ -1912,11 +1912,3 @@ Usage (In Ghost editor):
 .hidden {
     display: none !important;
 }
-
-/* Dirty fix, all content should just `overflow-wrap: break-word;`
- * but that didn't appear to work
- */
-p {
-    word-break: normal;
-    overflow-wrap: break-word;
-}
