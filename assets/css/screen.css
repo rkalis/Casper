@@ -1912,3 +1912,7 @@ Usage (In Ghost editor):
 .hidden {
     display: none !important;
 }
+
+body {
+    overflow-wrap: break-word;
+}
