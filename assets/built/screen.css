@@ -172,5 +172,5 @@ Usage (In Ghost editor):
 
 /* Dirty fix, all content should just `overflow-wrap: break-word;`
  * but that didn't appear to work
- */code{word-break:normal;overflow-wrap:break-word}
+ */p{word-break:normal;overflow-wrap:break-word}
 /*# sourceMappingURL=screen.css.map */
