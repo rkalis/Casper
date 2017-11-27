@@ -1913,7 +1913,7 @@ Usage (In Ghost editor):
     display: none !important;
 }
 
-code {
+html {
     overflow-x: auto !important;
     overflow-wrap: break-word !important;
 }
