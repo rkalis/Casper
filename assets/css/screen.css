@@ -887,12 +887,12 @@ Usage (In Ghost editor):
 
 .post-full-content h4 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h4 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 }
 
@@ -922,12 +922,12 @@ Usage (In Ghost editor):
 
 .post-full-content h6 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h6 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
