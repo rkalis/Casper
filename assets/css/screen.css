@@ -197,7 +197,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     height: 40px;
-    overflow-y: hidden;
+    overflow-y: visible;
     font-size: 1.2rem;
 }
 
@@ -1467,7 +1467,8 @@ Usage (In Ghost editor):
 }
 
 .floating-header-share-tw,
-.floating-header-share-fb {
+.floating-header-share-fb,
+.floating-header-share-li {
     display: block;
     align-items: center;
     width: 60px;
@@ -1484,6 +1485,10 @@ Usage (In Ghost editor):
 
 .floating-header-share-fb {
     background: #005e99;
+}
+
+.floating-header-share-li {
+    background: #0077b5;
 }
 
 .progress {
@@ -1538,7 +1543,8 @@ Usage (In Ghost editor):
         font-size: 1.5rem;
     }
     .floating-header-share-tw,
-    .floating-header-share-fb {
+    .floating-header-share-fb,
+    .floating-header-share-li {
         width: 40px;
         height: 40px;
         line-height: 38px;
@@ -1910,4 +1916,30 @@ Usage (In Ghost editor):
 
 .hidden {
     display: none !important;
+}
+
+
+.search-box {
+    margin-bottom: 10px;
+    position: relative;
+    overflow: visible;
+}
+
+.search-field {
+    background-color: white;
+    color: black;
+}
+
+.search-results {
+    position: absolute;
+    width: 150%;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border: 2px solid black;
+    z-index: 50;
+}
+
+.search-results:empty {
+    border: none;
 }
