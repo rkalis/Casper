@@ -9,7 +9,7 @@
     crossorigin="anonymous">
 </script>
 <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-<script type="text/javascript" src="{{asset "ghostHunter/dist/jquery.ghosthunter.js"}}"></script>
+{{!-- <script type="text/javascript" src="{{asset "ghostHunter/dist/jquery.ghosthunter.js"}}"></script> --}}
 
 <script>
 var images = document.querySelectorAll('.kg-gallery-image img');
@@ -22,7 +22,7 @@ images.forEach(function (image) {
 })
 </script>
 
-<script>
+{{!-- <script>
     $("#search-field").ghostHunter({
       results: "#search-results",
       result_template: "<a id='gh-\{\{id\}\}' class='gh-search-item' href='\{\{link\}\}'><h4>\{\{title\}\}</h4><p>\{\{pubDate\}\}</p></a>",
@@ -30,7 +30,7 @@ images.forEach(function (image) {
       displaySearchInfo: false,
       includePages: true
     });
-</script>
+</script> --}}
 
 {{#if pagination.pages}}
 <script>
