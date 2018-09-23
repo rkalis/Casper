@@ -9,6 +9,17 @@
     crossorigin="anonymous">
 </script>
 <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+<script type="text/javascript" src="{{asset "ghostHunter/dist/jquery.ghosthunter.js"}}"></script>
+
+<script>
+    $("#search-field").ghostHunter({
+      results: "#search-results",
+      result_template: "<a id='gh-\{\{id\}\}' class='gh-search-item' href='\{\{link\}\}'><h4>\{\{title\}\}</h4><p>\{\{pubDate\}\}</p></a>",
+      onKeyUp: true,
+      displaySearchInfo: false,
+      includePages: true
+    });
+</script>
 
 {{#if pagination.pages}}
 <script>
