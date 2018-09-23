@@ -11,7 +11,6 @@
                     {{#if primary_tag}}
                         <span>{{primary_tag.name}}</span>
                     {{/if}}
-                    <span class="date-divider">/</span> <span class="read-time">{{reading_time}}</span>
                 </div>
                 <h2 class="post-card-title">{{title}}</h2>
             </header>
@@ -19,5 +18,27 @@
                 <p>{{excerpt words="33"}}</p>
             </section>
         </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+            {{#foreach authors}}
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        {{name}}
+                    </div>
+
+                    {{#if profile_image}}
+                        <a href="{{url}}" class="static-avatar"><img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" /></a>
+                    {{else}}
+                        <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}</a>
+                    {{/if}}
+                </li>
+            {{/foreach}}
+            </ul>
+
+            <span class="reading-time">{{reading_time}}</span>
+
+        </footer>
     </div>
 </article>

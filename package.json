@@ -1,10 +1,10 @@
 {
     "name": "roscasper",
     "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
-    "demo": "https://blog.kalis.me",
+    "demo": "https://kalis.me",
     "version": "1.0.0",
     "engines": {
-        "ghost": ">=1.2.0"
+        "ghost": ">=2.0.0"
     },
     "license": "MIT",
     "author": {
@@ -21,7 +21,8 @@
     },
     "keywords": [
         "ghost",
-        "theme"
+        "theme",
+        "ghost-theme"
     ],
     "repository": {
         "type": "git",
@@ -30,19 +31,19 @@
     "bugs": "https://github.com/rkalis/roscasper/issues",
     "contributors": "https://github.com/rkalis/roscasper/graphs/contributors",
     "devDependencies": {
-        "autoprefixer": "^7.1.0",
-        "cssnano": "^3.10.0",
-        "gulp": "^3.9.1",
-        "gulp-livereload": "^3.8.1",
-        "gulp-nodemon": "^2.1.0",
-        "gulp-postcss": "^7.0.0",
-        "gulp-sourcemaps": "^2.6.0",
-        "gulp-util": "^3.0.7",
-        "gulp-watch": "^4.3.8",
-        "postcss-color-function": "^4.0.0",
-        "postcss-custom-properties": "^6.1.0",
-        "postcss-easy-import": "^3.0.0",
-        "precss": "^2.0.0"
+        "autoprefixer": "6.3.6",
+        "cssnano": "3.7.1",
+        "gscan": "^2.0.0",
+        "gulp": "3.9.1",
+        "gulp-livereload": "3.8.1",
+        "gulp-postcss": "6.1.1",
+        "gulp-sourcemaps": "1.6.0",
+        "gulp-util": "3.0.7",
+        "gulp-watch": "4.3.8",
+        "gulp-zip": "4.0.0",
+        "postcss-color-function": "2.0.1",
+        "postcss-custom-properties": "5.0.1",
+        "postcss-easy-import": "1.0.1"
     },
     "config": {
         "posts_per_page": 25
