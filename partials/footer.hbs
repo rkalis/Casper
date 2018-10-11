@@ -16,10 +16,10 @@
     (function() {
         if (typeof socialMedia !== 'undefined') {
             if (typeof socialMedia.github !== 'undefined') {
-                $('.site-footer-nav').append(`<a href="${socialMedia.github}" title="GitHub" target="_blank" rel="noopener">{{> "icons/github"}}</a>`);
+                $('.site-footer-nav').append(`<a href="${socialMedia.github}" class="rss-button" title="GitHub" target="_blank" rel="noopener">{{> "icons/github"}}</a>`);
             }
             if (typeof socialMedia.linkedin !== 'undefined') {
-                $('.site-footer-nav').append(`<a href="${socialMedia.linkedin}" title="LinkedIn" target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>`);
+                $('.site-footer-nav').append(`<a href="${socialMedia.linkedin}" class="rss-button" title="LinkedIn" target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>`);
             }
         }
     })();
