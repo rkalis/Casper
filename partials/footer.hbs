@@ -5,8 +5,8 @@
         <nav class="site-footer-nav">
             <a href="{{@blog.url}}">Home</a>
             <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/" class="rss-button" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" class="social-link social-link-fb" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>{{/if}}
-            {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" class="social-link social-link-tw" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>{{/if}}
+            {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" class="rss-button" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>{{/if}}
+            {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" class="rss-button" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>{{/if}}
         </nav>
     </div>
 </footer>
