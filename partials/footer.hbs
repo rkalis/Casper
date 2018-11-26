@@ -21,6 +21,9 @@
             if (typeof socialMedia.linkedin !== 'undefined') {
                 $('.site-footer-nav').append(`<a href="${socialMedia.linkedin}" class="rss-button" title="LinkedIn" target="_blank" rel="noopener">{{> "icons/linkedin-footer"}}</a>`);
             }
+            if (typeof socialMedia.email !== 'undefined') {
+                $('.site-footer-nav').append(`<a href="${socialMedia.email}" class="rss-button" title="Email" target="_blank" rel="noopener">{{> "icons/mail"}}</a>`);
+            }
         }
     })();
 </script>
