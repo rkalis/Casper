@@ -15,6 +15,9 @@
 <script>
     (function() {
         if (typeof socialMedia !== 'undefined') {
+            if (typeof socialMedia.instagram !== 'undefined') {
+                $('.site-footer-nav').append(`<a href="${socialMedia.instagram}" class="rss-button" title="Instagram" target="_blank" rel="noopener">{{> "icons/instagram"}}</a>`);
+            }
             if (typeof socialMedia.github !== 'undefined') {
                 $('.site-footer-nav').append(`<a href="${socialMedia.github}" class="rss-button" title="GitHub" target="_blank" rel="noopener">{{> "icons/github"}}</a>`);
             }
