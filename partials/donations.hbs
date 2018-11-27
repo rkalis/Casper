@@ -1,0 +1,20 @@
+{{#contentFor "scripts"}}
+<script>
+    (function() {
+        if (typeof donations !== 'undefined') {
+            $('.post-full').append(`
+<hr></hr>
+<footer class="post-full-footer">
+    <div>
+        To give you an optimal reading experience, I'm not running any ads on this site. I do have Brave Rewards enabled,
+        so if you want to support my content, download the <a href="${donations.brave}">Brave Browser</a> and enable Brave Payments
+        to automatically include this site in your monthly payments. You can also donate directly using Ethereum or Bitcoin Cash.
+        <div style="margin-top: 1em; text-align: center">ETH: ${donations.eth}</div>
+        <div style="text-align: center">BCH: ${donations.bch}</div>
+    </div>
+</footer>
+            `);
+        }
+    })();
+</script>
+{{/contentFor}}

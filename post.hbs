@@ -48,17 +48,10 @@ into the {body} of the default.hbs template --}}
             </section>
             {{/if}}
 
-            <footer class="post-full-footer">
-                {{#has author="count:>1"}}
-                    {{> "byline-multiple"}}
-                {{else}}
-                    {{> "byline-single"}}
-                {{/has}}
-            </footer>
-
             {{> disqus}}
+            {{!-- This does not necessarily end up here, it inserts at the end of the article --}}
+            {{> donations}}
         </article>
-
     </div>
 </main>
 
