@@ -1840,11 +1840,6 @@ Usage (In Ghost editor):
     max-width: 920px;
 }
 
-.post-template .post-content > p:first-child {
-    font-size: 1.25em;
-    line-height: 1.5em;
-}
-
 .post-full-content .kg-image {
     max-width: 100%;
 }
