@@ -8,8 +8,9 @@
         <a class="post-card-content-link" href="{{url}}">
             <header class="post-card-header">
                 <div class="post-card-tags">
+                    <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM, YYYY"}}</time>
                     {{#if primary_tag}}
-                        <span>{{primary_tag.name}}</span>
+                        <span class="date-divider">/</span><span>{{primary_tag.name}}</span>
                     {{/if}}
                 </div>
                 <h2 class="post-card-title">{{title}}</h2>
